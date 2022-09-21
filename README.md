@@ -52,6 +52,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
     BGHangMonitor.shareInstance.deadBlock = ^(NSString * _Nonnull vcClassName) {
         NSLog(@"------%@发现卡死,主线程无响应时长>5s-----", vcClassName);
     };
+    // 设置卡顿间隔时间 默认80ms（连续3次都超过了卡顿间隔视为卡顿）
+    BGHangMonitor.shareInstance.hangT = 80;
+    // 设置卡死阈值 默认5s
+    BGHangMonitor.shareInstance.deadT = 5;
     [BGHangMonitor.shareInstance beginMonitor];
 ```
 ```ruby

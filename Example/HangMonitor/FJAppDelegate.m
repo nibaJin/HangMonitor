@@ -22,6 +22,10 @@
     BGHangMonitor.shareInstance.deadBlock = ^(NSString * _Nonnull vcClassName) {
         NSLog(@"------%@发现卡死,主线程无响应时长>5s-----", vcClassName);
     };
+    // 默认80ms
+    BGHangMonitor.shareInstance.hangT = 80;
+    // 默认5s
+    BGHangMonitor.shareInstance.deadT = 5;
     [BGHangMonitor.shareInstance beginMonitor];
     return YES;
 }
