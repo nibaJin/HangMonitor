@@ -34,7 +34,9 @@ iOS开发中，由于UIKit是非线程安全的，因此一切与UI相关的操�
 目前大多数APM工具都是采用监听Runloop的方式进行卡顿的捕获，这也是性能、准确性表现最好的一种方案。HangMonitor就是通过监听Runloop的方式。
 
 卡顿：HangMonitor默认连续三次超过80ms&小于5s runloop处于kCFRunLoopBeforeSources或者kCFRunLoopAfterWaiting状态，视为卡顿。
+
 卡死：HangMonitor默认大于等于5s runloop处于kCFRunLoopBeforeSources或者kCFRunLoopAfterWaiting状态，视为卡死。
+
 卡顿和卡死阈值均可以根据自己的业务进行修改。
 
 ## Example
