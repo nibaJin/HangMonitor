@@ -1,0 +1,16 @@
+PODS:
+  - HangMonitor (0.1.0)
+
+DEPENDENCIES:
+  - HangMonitor (from `../`)
+
+EXTERNAL SOURCES:
+  HangMonitor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HangMonitor: a5e8cfd5cb1e9a8e69e1ab10757fd7c61cb40a91
+
+PODFILE CHECKSUM: b7b0ddd9b6148d0f1a5effe98066f9c89ede4130
+
+COCOAPODS: 1.11.3
