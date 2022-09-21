@@ -27,6 +27,7 @@ iOS开发中，由于UIKit是非线程安全的，因此一切与UI相关的操�
 6、RunloopExit
 
 6个时机的事件回调，其流转关系如下图所示。Runloop在没有任务需要处理的时候就会进入至休眠状态，直至有信号将其唤醒，其又会去处理新的任务。
+![runloopEvent](https://raw.githubusercontent.com/nibaJin/HangMonitor/main/readmeImg/runloop.png)
 在日常编码中，UIEvent事件、Timer事件、dispatch主线程任务都是在Runloop的循环机制的驱动下完成的。一旦我们在主线程中的任何一个环节进行了一个耗时的操作，或者因为锁的使用不当造成了与其它线程的死锁，主线程就会因为无法执行Core - Animation的回调而造成界面无法刷新。而用户的交互又依赖于UIEvent的传递和响应，该流程也必须在主线程中完成。所以说主线程的阻塞会导致UI和交互的双双阻塞，这也是导致卡死、卡顿的根本原因。
 
 ### 卡死/卡顿监控方案
