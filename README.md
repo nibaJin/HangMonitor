@@ -1,5 +1,5 @@
 # HangMonitor
-iOS轻量级主线程卡顿、卡死监控
+iOS轻量级主线程卡顿、卡死监控工具类
 
 ## Example
 
