@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'Pod/Classes/**/*.h'
+  s.source_files = 'HangMonitor/Classes/**/*'
   
-  s.public_header_files = 'HangMonitor/Classes/BGHangMonitor.h'
+  s.public_header_files = 'Pod/Classes/**/*.h'
 end
