@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HangMonitor'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'iOS轻量级主线程卡顿、卡死监控工具'
 
 # This description is used to generate tags and improve search results.
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'HangMonitor/Classes/**/*'
+  s.source_files = 'Pod/Classes/**/*.h'
   
   s.public_header_files = 'HangMonitor/Classes/BGHangMonitor.h'
 end
